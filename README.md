@@ -11,14 +11,18 @@ The difference between this docker image and others, is that you do not need to 
 `docker pull morgyn/starbound`
 
 ## Run the image
-`docker run --name starbound -p 21025:21025 -v /starbound:/root/starbound morgyn/starbound`
+```sh
+docker run --name starbound -p 21025:21025 -v /root/starbound:/starbound morgyn/starbound
+```
 
-Replace /root/starbound with where you wish to store your starbound installation.
+Replace ``/root/starbound`` with where you wish to store your Starbound installation.
 
 The image contains nothing but the update script and the steamcmd. You will have to first run update.sh to download first
 
 ## Run the update script while the image is running
-`docker exec -t -i starbound /update.sh <steam login id>`
+```sh
+docker exec -t -i starbound /update.sh <steam login id>
+```
 
 This script will prompt you to for your password, and if required steamguard, it will then perform the initial installation
 
@@ -27,9 +31,9 @@ If it fails or quits for some reason, you can just rerun to compelete
 Successful completion of the installation, the container will stop
 
 
-## Configure your starbound server.
+## Configure your Starbound server.
 
-Edit your configuration in the installation directory you chose.
+Edit your configuration in the installation directory you chose (``.../starbound/storage/starbound_server.config``)
 
 [ http://starbounder.org/Guide:Setting_Up_Multiplayer#Advanced_Server_Configuration ]
 
