@@ -24,11 +24,11 @@ The image contains nothing but the update script and the steamcmd. You will have
 docker exec -t -i starbound /update.sh <steam login id>
 ```
 
-This script will prompt you to for your password, and if required steamguard, it will then perform the initial installation
+This script will prompt you to for your password (and steamguard if it's required), it will then perform the initial installation.
 
-If it fails or quits for some reason, you can just rerun to compelete
+If it fails or quits for some reason, you can just rerun to complete.
 
-Successful completion of the installation, the container will stop
+After the installation has completed successfully, the container will stop
 
 
 ## Configure your Starbound server.
