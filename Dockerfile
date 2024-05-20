@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 MAINTAINER morgyn
 
@@ -37,7 +37,6 @@ ADD start.sh /start.sh
 
 ADD update.sh /update.sh
 
-# Add initial require update flag
 ADD .update /.update
 
 WORKDIR /
